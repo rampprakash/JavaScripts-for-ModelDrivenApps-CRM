@@ -1,1 +1,25 @@
 
+// OnLoad Event For Opportunity
+function OnLoadEvent(executionContext) {
+    var formContext = executionContext.getFormContext();
+    if (formContext.getAttribute("cr608_name").getValue() != null) {
+        alert(formContext.getAttribute("cr608_name").getValue());
+    } else {
+        alert("Name Field is empty");
+    }
+}
+
+function OnSaveEvent(executionContext) {
+    alert("OnSave Operation triggered");
+}
+
+function OnChangeEvent(executionContext) {
+    var formContext = executionContext.getFormContext();
+    if (formContext.getAttribute("cr608_name").getValue() != null) {
+        alert(formContext.getAttribute("cr608_name").getValue());
+    } else {
+        alert("Name Field is empty");
+    }
+}
+
+//cr608_name --> Rename this to LOGICAL NAME OF THE FIELD
